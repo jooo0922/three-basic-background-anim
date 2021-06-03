@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 
+      배경에 three.js 애니메이션을 넣는 방법
+
+      1. 원래는 transparent_canvas 예제처럼 캔버스의 position: fixed로 지정하고,
+      z-index: -1 로 설정해서 캔버스 자체를 전체 요소들보다 뒤로 빼줘도 배경으로 지정할 수 있음.
+      근데 이렇게 하면 three.js를 렌더링하는 js 코드와 현재 페이지가 반드시 통합되어 있어야 한다는 점.
+      만약이 페이지가 캔버스 외에 복잡한 요소가 많고, 그 요소들에 대해서도 js 코드로 이것저것 처리해줘야 할 게 많다면
+      three.js를 렌더링하는 코드와 충돌하지 않도록 신경써서 작성해줘야 하는 불편함이 있음.
+
+      2. 반면 iframe을 사용하는 방법도 있는데
+      얘는 three.js를 렌더링하는 js코드가 현재 페이지랑 통합될 필요가 없이,
+      three.js가 렌더링되는 페이지의 url만 iframe에 추가해주면 되니까 쉽고 간단함.
+      다만, iframe을 비롯한 프레임구조는 현재는 사용되지 않는 추세이고, W3C 에서도 사용하지 말것을 권고하고 있음.
+      게다가 메모리 및 컴퓨터 자원을 잡아먹거나, 보안 위험, 사용성 문제, 유지보수의 어려움, 검색엔진이 크롤링하지 못하는 점 등 단점이 너무 많기 때문에...
+      물론 three.js만 렌더링하는 페이지를 삽입하는 거라면 상관없긴 하겠지만 사용 시 이런 점들을 고려할 필요는 있을 것 같다.
+    -->
+    <iframe id="background" src="./responsive/index.html"></iframe>
+    <div id="content">
+      <h1>Beautiful Cubes</h1>
+      <p>
+        <!-- <b>태그는 bold 처리를 해주는 태그 -->
+        <b>Cubes are beautiful</b>. You can have an entire planet of them, for
+        instance.
+      </p>
+      <p>
+        How cool is that? (A bit confusing, honestly. I have always felt as
+        though cubes had a tendency to be a little too cool and overly
+        realistic. Like an endless collection of super-realistic robots… But I
+        guess it is part of what makes them so interesting.)
+      </p>
+      <p>
+        So maybe there's a limit to what the human imagination can do for me.
+      </p>
+      <p>That can't hurt.</p>
+      <p>Well then… let's break it down.</p>
+      <p>Stardust</p>
+      <p>
+        I know a lot of you are saying: You can't, because you will get stuck
+        with something that's "too realistic." Well, I have a very real
+        suggestion: Just don't be that dude. In fact, let's be very specific: If
+        you have to do something, let the actual thing change. If it's a little
+        weird to have a space ship, or a spaceship you have to fly, or … well,
+        you probably already are.
+      </p>
+      <p>
+        Forget about all of the sci-fi stuff. Space. No sense hiding that from
+        me.
+      </p>
+      <p>
+        The space in my own home was never real-world. It was never something
+        that a person might have done. It was something that only seemed
+        plausible to me. There was only one "space craft," and if you could
+        figure
+      </p>
+      <p>
+        <b>Cubes are beautiful</b>. Don't underestimate a nice stack of cubes.
+      </p>
+      <p>
+        If you decide to stack more than one cube, don't forget to use a stack
+        of cubes as a guide to follow to make a tight fit. If a bunch of cubes
+        are stacked too close together, the edges will stick out which will make
+        for a tight fit!
+      </p>
+      <p>
+        Once again, if you decide you don't want to stack your boxes you can
+        place another stack of cubes along the edge.
+      </p>
+      <p>
+        And you are done! The process is super simple and simple it's the easy
+        stuff to set up.
+      </p>
+      <p>But what if you don't like the size of the boxes?</p>
+      <p>
+        You see, in the old days, a box was a solid block of wood, plastic or
+        ceramic with an outer layer of cardboard.
+      </p>
+      <p>
+        In the 1990s, wood became the new material and in this method, the
+        cardboard and wood are joined together so that they can both become a
+        floor.
+      </p>
+      <p>
+        But some people don't like to use just the plastic/carpet layer. And
+        with those people, these cubes are more likely to get wet.
+      </p>
+      <p>So how does this stack?</p>
+      <p>
+        From: <a href="https://talktotransformer.com/">Talk to Transformer</a>
+      </p>
+    </div>
+  </body>
+</html>
